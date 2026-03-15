@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  text-align: center;
+
+  background: linear-gradient(-45deg, #ffd6e7, #f8e8ff, #e8f7ff, #fff0f5);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+}
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Header */
+header {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #f8d7e6, #fceff5);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #e48fb5;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #d76a9e;
+}
+
+/* Sections */
+section {
+    padding: 70px 20px;
+}
+section h2{
+font-size:32px;
+margin-bottom:15px;
+font-family:'Playfair Display',serif;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* Footer */
+footer {
+    background: #f8d7e6;
+    padding: 20px;
+    margin-top: 40px;
+}
+.bubbles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.bubbles span {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 50%;
+  animation: float 15s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+/* NAVBAR */
+
+.navbar{
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+
+.logo{
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links{
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover{
+  color: #e48fb5;
+}
+html{
+scroll-behavior: smooth;
+}
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+padding:0 20px;
+}
+
+.gallery-item{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.gallery-item img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.gallery-item p{
+padding:15px;
+font-weight:500;
+}
+
+.gallery-item:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+/* HERO SECTION */
+
+.hero{
+height:70vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+font-family:'Playfair Display',serif;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:25px;
+color:#555;
+}
+.hero-btn{
+padding:12px 28px;
+background:#e48fb5;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:500;
+transition:0.3s;
+}
+
+.hero-btn:hover{
+background:#d46a98;
+transform:scale(1.05);
+}
+.instagram{
+text-align:center;
+padding:50px 20px;
+}
+
+.insta-btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#000;
+color:white;
+text-decoration:none;
+border-radius:25px;
+transition:0.3s;
+}
+
+.insta-btn:hover{
+background:#333;
+}
+/* GLASS EFFECT */
+
+.about, .creations, .contact{
+background: rgba(255,255,255,0.6);
+backdrop-filter: blur(10px);
+border-radius:20px;
+margin:40px 20px;
+padding:40px 20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+/* FLOATING INSTAGRAM BUTTON */
+
+.floating-insta{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#e48fb5;
+color:white;
+font-size:24px;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.floating-insta:hover{
+transform:scale(1.1);
+background:#d46a98;
+}
+@media(max-width:768px){
+
+.hero h1{
+font-size:40px;
+}
+
+.nav-links{
+gap:15px;
+}
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+}
+/* CONTACT FORM */
+
+.contact-form{
+display:flex;
+flex-direction:column;
+gap:15px;
+max-width:400px;
+margin:auto;
+margin-top:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:12px;
+border-radius:10px;
+border:1px solid #ddd;
+font-size:14px;
+}
+
+.contact-form button{
+padding:12px;
+border:none;
+background:#e48fb5;
+color:white;
+border-radius:20px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.contact-form button:hover{
+background:#d46a98;
+}
+/* WHATSAPP BUTTON */
+
+.whatsapp-btn{
+position:fixed;
+bottom:20px;
+left:20px;
+background:#25D366;
+color:white;
+font-size:24px;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.whatsapp-btn:hover{
+transform:scale(1.1);
+}
+footer{
+text-align:center;
+padding:30px;
+margin-top:40px;
+background:#f7f7f7;
+font-size:14px;
+color:#555;
+}
